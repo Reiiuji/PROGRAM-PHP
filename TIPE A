@@ -7,11 +7,11 @@
 // Jurusan :
 // Fakultas :
 
-$Nama = "Wahyu Hidayat";
-$Kelas = "3KA01";
-$Npm = "11122464";
-$Jurusan = "SISTEM INFORMASI";
-$Fakultas = "FIKTI";
+$Nama = "????";
+$Kelas = "???";
+$Npm = "???";
+$Jurusan = "????";
+$Fakultas = "????";
 
 echo "Nama : " . $Nama . "<br>";
 echo "Kelas : " . $Kelas . "<br>";
