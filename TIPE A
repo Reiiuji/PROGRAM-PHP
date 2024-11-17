@@ -1,0 +1,209 @@
+<?php
+
+// 1. Buatlah program php yang menampilkan Biodata Kalian yang berisi variable nama, kelas, npm, jurusan, fakultas dengan ouput :
+// Nama : 
+// Kelas :
+// Npm :
+// Jurusan :
+// Fakultas :
+
+$Nama = "Wahyu Hidayat";
+$Kelas = "3KA01";
+$Npm = "11122464";
+$Jurusan = "SISTEM INFORMASI";
+$Fakultas = "FIKTI";
+
+echo "Nama : " . $Nama . "<br>";
+echo "Kelas : " . $Kelas . "<br>";
+echo "NPM : " . $Npm . "<br>";
+echo "Jurusan : " . $Jurusan . "<br>";
+echo "Fakultas : " . $Fakultas . "<br>";
+
+
+echo "<br>" ;
+// Di PHP, terdapat beberapa struktur kondisi yang dapat digunakan untuk mengontrol alur program berdasarkan kondisi tertentu. Berikut penjelasannya:
+
+// ---
+
+// ### 1. **`if` Statement**
+// Digunakan untuk menjalankan kode jika kondisi tertentu terpenuhi (benar/true).
+
+// **Sintaks:**
+// ```php
+// if (kondisi) {
+//     // kode yang dijalankan jika kondisi bernilai true
+// }
+// ```
+
+// **Contoh:**
+// ```php
+// $nilai = 85;
+
+// if ($nilai >= 75) {
+//     echo "Lulus";
+// }
+// ```
+
+// ---
+
+// ### 2. **`if...else` Statement**
+// Menambahkan jalur alternatif jika kondisi tidak terpenuhi (false).
+
+// **Sintaks:**
+// ```php
+// if (kondisi) {
+//     // kode jika kondisi bernilai true
+// } else {
+//     // kode jika kondisi bernilai false
+// }
+// ```
+
+// **Contoh:**
+// ```php
+// $nilai = 60;
+
+// if ($nilai >= 75) {
+//     echo "Lulus";
+// } else {
+//     echo "Tidak Lulus";
+// }
+// ```
+
+// ---
+
+// ### 3. **`if...elseif...else` Statement**
+// Digunakan untuk memeriksa beberapa kondisi berurutan. Jalur pertama yang memenuhi kondisi akan dijalankan.
+
+// **Sintaks:**
+// ```php
+// if (kondisi1) {
+//     // kode jika kondisi1 true
+// } elseif (kondisi2) {
+//     // kode jika kondisi2 true
+// } else {
+//     // kode jika semua kondisi false
+// }
+// ```
+
+// **Contoh:**
+// ```php
+// $nilai = 65;
+
+// if ($nilai >= 85) {
+//     echo "Sangat Baik";
+// } elseif ($nilai >= 75) {
+//     echo "Baik";
+// } else {
+//     echo "Perlu Perbaikan";
+// }
+// ```
+
+// ---
+
+// ### 4. **`switch` Statement**
+// Digunakan untuk membandingkan satu nilai dengan beberapa kasus (case). Cocok untuk kasus dengan banyak cabang yang spesifik.
+
+// **Sintaks:**
+// ```php
+// switch (ekspresi) {
+//     case nilai1:
+//         // kode jika ekspresi == nilai1
+//         break;
+//     case nilai2:
+//         // kode jika ekspresi == nilai2
+//         break;
+//     default:
+//         // kode jika tidak ada case yang cocok
+// }
+// ```
+
+// **Contoh:**
+// ```php
+// $warna = "merah";
+
+// switch ($warna) {
+//     case "merah":
+//         echo "Berhenti!";
+//         break;
+//     case "kuning":
+//         echo "Siap-siap!";
+//         break;
+//     case "hijau":
+//         echo "Jalan!";
+//         break;
+//     default:
+//         echo "Warna tidak dikenali!";
+// }
+
+
+
+// 3. sebuah perusahaan telekomunikasi ingin memberikan bonus kepada karyawannnya berdasarkan jumlah tahun kerja mereka. 
+// Bonus akan diberikan sebesar Rp 10.000.000 untuk tahun pertama Rp 12.000.000 untuk tahun kedua dan meningkat
+// 2.000.000 setiap tahunnya. Buatlah program PHP untuk menghitung total bonus yang akan diterima oleh karyawan dengan  10 tahun kerja
+
+
+
+
+// Inisialisasi variabel
+$bonusPertama = 10000000; // Bonus tahun pertama
+$peningkatanBonus = 2000000; // Kenaikan bonus setiap tahun
+$totalBonus = 0; // Variabel untuk menghitung total bonus
+$tahunKerja = 10; // Jumlah tahun kerja
+
+// Perulangan untuk menghitung bonus tiap tahun
+for ($tahun = 1; $tahun <= $tahunKerja; $tahun++) {
+    if ($tahun == 1) {
+        $bonusTahunan = $bonusPertama; // Tahun pertama
+    } elseif ($tahun == 2) {
+        $bonusTahunan = 12000000; // Tahun kedua
+    } else {
+        $bonusTahunan = 12000000 + ($peningkatanBonus * ($tahun - 2)); // Tahun ketiga dan seterusnya
+    }
+
+    $totalBonus += $bonusTahunan; // Tambahkan bonus tahunan ke total bonus
+}
+
+// Tampilkan total bonus
+echo "Total bonus yang diterima karyawan dengan $tahunKerja tahun kerja adalah Rp " . $totalBonus;
+
+
+echo "<br>" ;
+echo "<br>" ;
+// 4.sebuah toko memiliki daftar harga barang sebagai array: [15000,20000,30000,50000] buatlah 
+// program php dengan perulangan while untuk menghitung total harga barang tersebut (tidak boleh menggunakan fungsi sum)
+
+
+
+
+// Daftar harga barang
+$hargaBarang = [15000, 20000, 30000, 50000];
+
+// Inisialisasi variabel
+$totalHarga = 0; // Untuk menyimpan total harga
+$indeks = 0;     // Indeks awal
+
+// Perulangan while untuk menghitung total harga
+while ($indeks < count($hargaBarang)) {
+    $totalHarga += $hargaBarang[$indeks]; // Tambahkan harga barang ke total
+    $indeks++; // Naikkan indeks ke elemen berikutnya
+}
+
+// Tampilkan total harga
+echo "Total harga barang adalah Rp " . $totalHarga
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
